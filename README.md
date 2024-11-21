@@ -46,9 +46,7 @@ This project aims to predict the **arousal** and **valence** levels of songs bas
 1. Ensure you have the required libraries installed:
    ```bash
    pip install numpy pandas scikit-learn joblib
-```
 
 2. Make sure the arousal.csv and valence.csv files are in the correct directory `(./data/annotations/)`.
 3. Run the script:
-```python model_training.py
-```
+``` bash python model_training.py
