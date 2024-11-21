@@ -49,4 +49,5 @@ This project aims to predict the **arousal** and **valence** levels of songs bas
 
 2. Make sure the arousal.csv and valence.csv files are in the correct directory `(./data/annotations/)`.
 3. Run the script:
-``` bash python model_training.py
+```bash 
+    python model_training.py
