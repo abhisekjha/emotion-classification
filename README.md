@@ -1,53 +1,43 @@
-# emotion-classification
+# Emotion‑Aware Music Classification
 
-# Arousal and Valence Prediction Model
+> **Enhancing Diverse and Inclusive Audio Experiences**
+>
+> Accepted as a **Poster – Abstract Paper (Category 2)** at the **AES International Conference on Breaking Barriers in Audio, 2025**.
 
-This project aims to predict the **arousal** and **valence** levels of songs based on extracted features from audio data. A **Random Forest Regressor** model is trained using statistical features of the song's arousal and valence data to predict the emotional tone of the song.
+<p align="center">
+  <img src="images/paper.png" width="420" alt="Conference Express Paper – title page">
+  <img src="images/acceptance.png" width="420" alt="Acceptance notification e‑mail">
+</p>
 
-## Steps in the Code
+---
 
-### 1. **Data Loading**
-   - The code loads **CSV files** containing the **arousal** and **valence** features for each song. These files are assumed to contain data about songs over different time points.
+## Abstract
+This repository accompanies the paper **“Emotion‑Aware Music Classification: Enhancing Diverse and Inclusive Audio Experiences.”**
 
-### 2. **Feature Extraction**
-   - A function `extract_summary_statistics` calculates **summary statistics** (mean, median, standard deviation, max, and min) for each song's arousal and valence data. These statistics summarize the emotional tone of the song.
+Traditional music–information‑retrieval (MIR) pipelines are predominantly trained on Western‑centric corpora, leading to biased emotion predictions for under‑represented musical traditions. We propose a **multi‑branch deep‑learning framework** trained on cross‑cultural datasets and an **emotion‑mapping strategy** that aligns heterogeneous label taxonomies. Experiments show **+5.4 pp** accuracy over strong CNN/RNN baselines and markedly better generalisation to diverse musical styles. Our goal is to foster **fairer music recommendation, accessibility‑oriented design, and diversity, equity & inclusion (DEI)‑aware MIR.**
 
-### 3. **Data Preparation**
-   - The summary statistics (features) for both **arousal** and **valence** are combined into a single matrix `X`, which will be used as the input for training the models.
-   - The **labels** (`y_arousal` and `y_valence`) are created by calculating the **mean** of the arousal and valence values across all time points.
+---
 
-### 4. **Data Splitting**
-   - The dataset is split into **training** and **testing** sets, with 80% used for training and 20% for testing.
+## Key Contributions
 
-### 5. **Model Training**
-   - Two **Random Forest Regressor** models are trained:
-     - One model for **arousal** prediction.
-     - One model for **valence** prediction.
-   - These models learn to predict the emotional tone of the song based on the extracted features.
+- **Integration of multicultural data sets** – Training data spans multiple musical traditions to improve emotion classification in diverse cultural groups.
+- **Cross‑cultural emotion mapping** – Standardises labels across different cultural emotion‑perception frameworks.
+- **Multi‑branch architecture** – Specialised subnetworks capture timbre, rhythm, and lyrical cues, fused via attention.
+- **Fairness evaluation suite** – Includes DEI metrics beyond top‑1 accuracy to measure cultural bias.
 
-### 6. **Model Evaluation**
-   - The models are evaluated using **Mean Squared Error (MSE)** to measure the accuracy of the predictions. A lower MSE indicates better performance.
+---
 
-### 7. **Saving the Models**
-   - The trained models are saved using **joblib**, allowing them to be reused later without needing to retrain them.
+## License
+Distributed under the **MIT License** – see [`LICENSE`](LICENSE) for details.
 
-### 8. **Output**
-   - The **MSE values** for both models are printed to show how well the models are performing on the test data.
+---
 
-## Requirements
-- Python 3.x
-- **Libraries**:
-  - `numpy`
-  - `pandas`
-  - `scikit-learn`
-  - `joblib`
+## Contact & Questions
+Feel free to open an issue or reach out 📧 **abhisekjha2020[at].gmail.com**.
 
-## How to Run
-1. Ensure you have the required libraries installed:
-   ```bash
-   pip install numpy pandas scikit-learn joblib
+---
 
-2. Make sure the arousal.csv and valence.csv files are in the correct directory `(./data/annotations/)`.
-3. Run the script:
-```bash 
-    python model_training.py
+<p align="center">
+  <sub>© 2025 Abhisek Jha – The University of Texas at Arlington.</sub>
+</p>
+
